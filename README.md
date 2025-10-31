@@ -9,6 +9,7 @@
 
 Look at this form... Looks like something is missing here. Labels? Placeholders? Yeah..
 
+
 ![Preview](./src/images/preview.png)
 
 Your task is to make script, which fixes problems in this form.
