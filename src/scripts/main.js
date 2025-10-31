@@ -3,7 +3,7 @@
 const forms = document.querySelectorAll('form');
 
 forms.forEach((form) => {
-  const inputs = form.querySelectorAll('input');
+  const inputs = form.querySelectorAll('input:not([type="submit"])');
 
   inputs.forEach((elem) => {
     if (!elem.id) {
@@ -27,8 +27,9 @@ function normalizeName(text) {
   if (text.length === 0) {
     return '';
   }
-  
-  const normalizedName = '' + text[0].toUpperCase() + text.slice(1);
 
-  return normalizedName;
+  return text
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
 }
