@@ -1,0 +1,2 @@
+"use strict";var forms=document.querySelectorAll("form");function normalizeName(e){return 0===e.length?"":e.split("-").map(function(e){return e.charAt(0).toUpperCase()+e.slice(1)}).join(" ")}forms.forEach(function(e){e.querySelectorAll('input:not([type="submit"])').forEach(function(e){e.id||(e.id=e.name||e.type);var t=document.createElement("label");t.classList.add("field-label"),t.htmlFor=e.id,e.insertAdjacentElement("beforebegin",t);var n=normalizeName(e.name);t.textContent=n,e.placeholder=n})});
+//# sourceMappingURL=js_task_fix_form_DOM.b32efebf.js.map
