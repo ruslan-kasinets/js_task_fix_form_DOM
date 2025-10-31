@@ -24,6 +24,10 @@ forms.forEach((form) => {
 });
 
 function normalizeName(text) {
+  if (text.length === 0) {
+    return '';
+  }
+  
   const normalizedName = '' + text[0].toUpperCase() + text.slice(1);
 
   return normalizedName;
